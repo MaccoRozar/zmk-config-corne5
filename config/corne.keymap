@@ -14,7 +14,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        base_layer {
             // -----------------------------------------------------------------------------------------
             // |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |
             // |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |
@@ -22,13 +22,21 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp Q  &kp C       &kp O  &kp P  &kp W         &kp J    &kp M     &kp D               &to 3            &kp Y        &kp A                 &kp S
+&kp Q  &kp C       &kp O  &kp P  &kp W         &kp J    &kp M     &kp D               &to 0            &kp Y        &kp A                 &kp S
 &kp E  &kp N       &kp F  &kp L  &kp R         &kp T    &kp I     &kp U               &kp Z            &kp X        &kp KP_MINUS          &kp V
 &kp B  &kp KP_DOT  &kp H  &kp G  &kp KP_COMMA  &kp K    &kp LGUI  &mt LEFT_SHIFT ESC  &lt 1 BACKSPACE  &lt 1 SPACE  &mt RIGHT_ALT RETURN  &kp RALT
             >;
         };
 
-        lower_layer {
+        nav_layer {
+            bindings = <
+&kp TAB      &kp HOME      &kp UP           &kp END          &kp PAGE_UP      &kp KP_DIVIDE      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans             &kp CAPS    &kp LEFT
+&kp DOWN     &kp RIGHT     &kp PAGE_DOWN    &kp KP_SUBTRACT  &kp KP_NUMBER_4  &kp KP_NUMBER_5    &kp KP_NUMBER_6  &kp KP_NUMBER_0  &trans           &kp K_VOLUME_DOWN  &kp K_MUTE  &kp K_VOLUME_UP
+&kp LS(TAB)  &kp KP_COMMA  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT         &trans           &trans           &trans           &trans             &trans      &trans
+            >;
+        };
+
+        what_layer {
             // -----------------------------------------------------------------------------------------
             // |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |
             // | BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |
@@ -39,28 +47,6 @@
 &kp N1        &kp N2        &kp N3        &kp N4    &kp N5    &kp N6    &kp N7     &kp N8  &kp N9     &kp N0   &bt BT_SEL 0  &bt BT_SEL 1
 &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans     &trans   &trans        &trans
 &trans        &trans        &trans        &trans    &trans    &trans    &kp LGUI   &trans  &kp SPACE  &kp RET  &trans        &kp RALT
-            >;
-        };
-
-        raise_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |
-            // |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |
-            // |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
-&kp EXCL  &kp AT     &kp HASH  &kp DLLR   &kp PRCNT  &kp CARET    &kp AMPS  &kp ASTRK  &kp LPAR   &kp RPAR  &trans  &trans
-&trans    &trans     &trans    &kp MINUS  &kp EQUAL  &kp LBKT     &kp RBKT  &kp BSLH   &trans     &trans    &trans  &trans
-&trans    &kp UNDER  &kp PLUS  &kp LBRC   &kp RBRC   &kp PIPE     &kp LGUI  &trans     &kp SPACE  &kp RET   &trans  &kp RALT
-            >;
-        };
-
-        layer_3 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
