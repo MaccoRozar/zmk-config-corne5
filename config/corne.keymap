@@ -11,6 +11,18 @@
 / {
     chosen { zmk,matrix-transform = &five_column_transform; };
 
+    behaviors {
+        HRM_custom: HRM_custom {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRM_CUSTOM";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -22,9 +34,9 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp Q  &kp C       &kp O  &kp P  &kp W         &kp J    &kp M     &kp D               &to 0            &kp Y        &kp A                 &kp S
-&kp E  &kp N       &kp F  &kp L  &kp R         &kp T    &kp I     &kp U               &kp Z            &kp X        &kp KP_MINUS          &kp V
-&kp B  &kp KP_DOT  &kp H  &kp G  &kp KP_COMMA  &kp K    &kp LGUI  &mt LEFT_SHIFT ESC  &lt 1 BACKSPACE  &lt 1 SPACE  &mt RIGHT_ALT RETURN  &kp RALT
+&kp Q                       &kp C                     &kp O  &kp P  &kp W                      &kp J                          &kp M                    &kp D                    &to 0            &kp Y        &HRM_custom LEFT_GUI A  &HRM_custom LEFT_ALT S
+&HRM_custom LEFT_CONTROL E  &HRM_custom LEFT_SHIFT N  &kp F  &kp L  &HRM_custom RIGHT_SHIFT R  &HRM_custom RIGHT_CONTROL T    &HRM_custom RIGHT_ALT I  &HRM_custom RIGHT_GUI U  &kp Z            &kp X        &kp KP_MINUS            &kp V
+&kp B                       &kp KP_DOT                &kp H  &kp G  &kp KP_COMMA               &kp K                          &kp LEFT_CONTROL         &mt LEFT_SHIFT ESC       &lt 1 BACKSPACE  &lt 1 SPACE  &mt RIGHT_ALT RETURN    &kp RALT
             >;
         };
 
@@ -32,7 +44,23 @@
             bindings = <
 &kp TAB      &kp HOME      &kp UP           &kp END          &kp PAGE_UP      &kp KP_DIVIDE      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans             &kp CAPS    &kp LEFT
 &kp DOWN     &kp RIGHT     &kp PAGE_DOWN    &kp KP_SUBTRACT  &kp KP_NUMBER_4  &kp KP_NUMBER_5    &kp KP_NUMBER_6  &kp KP_NUMBER_0  &trans           &kp K_VOLUME_DOWN  &kp K_MUTE  &kp K_VOLUME_UP
-&kp LS(TAB)  &kp KP_COMMA  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT         &trans           &trans           &trans           &trans             &trans      &trans
+&kp LS(TAB)  &kp KP_COMMA  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT         &trans           &trans           &kp DELETE       &trans             &trans      &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        Function_layer {
+            bindings = <
+&kp F1  &kp F2  &kp F3  &kp F4  &trans  &trans    &trans  &trans  &trans  &trans   &kp F5   &kp F6
+&kp F7  &kp F8  &trans  &trans  &trans  &trans    &trans  &trans  &kp F9  &kp F10  &kp F11  &kp F12
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans   &trans
             >;
         };
 
