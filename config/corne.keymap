@@ -43,7 +43,7 @@
         nav_layer {
             bindings = <
 &kp TAB      &kp HOME      &kp UP           &kp END          &kp PAGE_UP      &kp KP_DIVIDE      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans             &kp CAPS    &kp LEFT
-&kp DOWN     &kp RIGHT     &kp PAGE_DOWN    &kp KP_SUBTRACT  &kp KP_NUMBER_4  &kp KP_NUMBER_5    &kp KP_NUMBER_6  &kp KP_NUMBER_0  &trans           &kp K_VOLUME_DOWN  &kp K_MUTE  &kp K_VOLUME_UP
+&kp DOWN     &kp RIGHT     &kp PAGE_DOWN    &kp KP_SUBTRACT  &kp KP_NUMBER_4  &kp KP_NUMBER_5    &kp KP_NUMBER_6  &kp KP_NUMBER_0  &mo 4            &kp K_VOLUME_DOWN  &kp K_MUTE  &kp K_VOLUME_UP
 &kp LS(TAB)  &kp KP_COMMA  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT         &trans           &trans           &kp DELETE       &trans             &trans      &trans
             >;
         };
