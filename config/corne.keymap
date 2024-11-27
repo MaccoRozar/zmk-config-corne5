@@ -34,9 +34,9 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp Q                       &kp C                     &kp O  &kp P  &kp W                      &kp J                          &kp M                    &kp D                    &to 0            &kp Y        &HRM_custom LEFT_GUI A  &HRM_custom LEFT_ALT S
+&kp Q                       &kp C                     &kp O  &kp P  &kp W                      &kp J                          &kp M                    &kp D                    &to 5            &kp Y        &HRM_custom LEFT_GUI A  &HRM_custom LEFT_ALT S
 &HRM_custom LEFT_CONTROL E  &HRM_custom LEFT_SHIFT N  &kp F  &kp L  &HRM_custom RIGHT_SHIFT R  &HRM_custom RIGHT_CONTROL T    &HRM_custom RIGHT_ALT I  &HRM_custom RIGHT_GUI U  &kp Z            &kp X        &kp KP_MINUS            &kp V
-&kp B                       &kp KP_DOT                &kp H  &kp G  &kp KP_COMMA               &kp K                          &kp LEFT_CONTROL         &mt LEFT_SHIFT ESC       &lt 1 BACKSPACE  &lt 1 SPACE  &mt RIGHT_ALT RETURN    &mo 2
+&kp B                       &kp KP_DOT                &kp H  &kp G  &kp KP_COMMA               &kp K                          &kp LEFT_CONTROL         &mt LEFT_SHIFT ESC       &lt 1 BACKSPACE  &lt 1 SPACE  &lt 2 RETURN            &mo 2
             >;
         };
 
@@ -50,9 +50,9 @@
 
         symbols_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&kp CARET              &kp LESS_THAN    &kp GREATER_THAN     &kp DOLLAR    &kp PERCENT    &kp AT           &kp AMPS  &kp STAR  &kp LS(APOSTROPHE)  &kp GRAVE  &kp LBRC  &kp LEFT_PARENTHESIS
+&kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp EQUAL            &kp BSLH      &kp PLUS       &kp MINUS        &kp FSLH  &kp DQT   &kp TILDE           &kp LBKT   &kp RBKT  &kp UNDER
+&kp LS(POUND)          &kp PIPE         &kp LS(EXCLAMATION)  &kp LS(SEMI)  &kp LS(COLON)  &kp LS(QMARK)    &trans    &trans    &trans              &trans     &trans    &trans
             >;
         };
 
@@ -80,7 +80,7 @@
 
         deadkey_layer_1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &to 6   &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
@@ -88,7 +88,7 @@
 
         deadkey_layer_2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &to 0   &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
